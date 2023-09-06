@@ -4,12 +4,12 @@ import { Wrapper, Content, Button, Para, Image } from "./CatBox.styles";
 const CatBox = (props) => {
 
   const addBasket = () => {
+    props.setTotalPrice(props.totalPrice + 5);
     // let basketList = [...props.basket];
     // let listAdd = [props.cats[index]];
     // basketList.push(listAdd);
     // props.setBasket(basketList);
     props.setShow(true);
-    console.log("hello");
   };
 
   return (

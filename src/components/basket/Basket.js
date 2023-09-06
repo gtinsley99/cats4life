@@ -10,9 +10,9 @@ import {
   BasketItem,
 } from "./Basket.styles";
 
-const Basket = ({ setShow, basket }) => {
+const Basket = (props) => {
   const closeBasket = () => {
-    setShow(false);
+    props.setShow(false);
   };
 
   return (
@@ -20,7 +20,7 @@ const Basket = ({ setShow, basket }) => {
       <Wrapper>
         <CloseButton onClick={closeBasket}>Close Basket</CloseButton>
         <BasketOrder>Your order:</BasketOrder>
-        {basket.map((item, index) => {
+        {props.basket.map((item, index) => {
           return (
             <BasketItem key={index}>
               <BasketName>Name: {item.name}</BasketName>
@@ -30,7 +30,7 @@ const Basket = ({ setShow, basket }) => {
           );
         })}
 
-        <TotalAmount>Total:</TotalAmount>
+        <TotalAmount>Total: £{props.totalPrice.toFixed(2)}</TotalAmount>
         <CheckoutButton>Proceed to Checkout</CheckoutButton>
       </Wrapper>
     </div>
