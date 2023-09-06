@@ -7,7 +7,7 @@ const Catsapi = (setCats) => {
     const fetchCats = async () => {
       try {
         const res = await fetch(
-          "https://api.thecatapi.com/v1/images/search?limit=10&has_breeds=1&api_key=GmThRaHgn9VohAryRwmvHCgeKuC19fmO8hmwNwiSsBayy1SaFXFSogCkUCSLLSmU"
+          "https://api.thecatapi.com/v1/images/search?limit=12&has_breeds=1&api_key=live_GmThRaHgn9VohAryRwmvHCgeKuC19fmO8hmwNwiSsBayy1SaFXFSogCkUCSLLSmU"
         );
         if (!res.ok) {
           throw new Error(res.statusText);
