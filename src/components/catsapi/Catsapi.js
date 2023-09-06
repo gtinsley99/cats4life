@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Catsapi = () => {
+const Catsapi = (setCats) => {
   const [errors, setErrors] = useState(null);
 
   useEffect(() => {
@@ -14,7 +14,6 @@ const Catsapi = () => {
         }
         const data = await res.json();
         setCats(data);
-        console.log(cats);
       } catch (error) {
         setErrors("Failed to fetch data");
         console.log(error);
@@ -23,6 +22,8 @@ const Catsapi = () => {
     };
     fetchCats();
   }, []);
+
+  return;
 };
 
 export default Catsapi;
