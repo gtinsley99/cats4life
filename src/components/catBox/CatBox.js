@@ -7,7 +7,7 @@ const CatBox = (props) => {
             return (
               <div key={index} value={index}>
                 <p>Name: {faker.person.firstName()}</p>
-                <p>Price: {faker.commerce.price()} </p>
+                <p>Price: £{faker.commerce.price({min: 20, max: 30})} </p>
                 <p>Location: {faker.location.country()}</p>
                     <img src={item.url} width="500px" height="300px"/>
               </div>
