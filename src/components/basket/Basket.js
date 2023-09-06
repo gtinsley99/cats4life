@@ -1,3 +1,5 @@
+import "./Basket.styles";
+
 const Basket = () => {
 
 };

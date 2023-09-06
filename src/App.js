@@ -23,8 +23,8 @@ function App() {
     <div className="App">
       <Navbar />
       <Title />
-      <CatBox cats={cats} />
-      <Basket cats={cats} />
+      <CatBox  />
+      <Basket />
     </div>
   );
 }
