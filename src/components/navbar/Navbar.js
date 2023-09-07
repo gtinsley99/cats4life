@@ -1,23 +1,36 @@
-import React from 'react';
+import React from "react";
 import { AiTwotoneHome } from "react-icons/ai";
-import {BiSolidContact} from "react-icons/bi";
-import {SlBasketLoaded} from "react-icons/sl";
+import { BiSolidContact } from "react-icons/bi";
+import { SlBasketLoaded } from "react-icons/sl";
 
-// import { Basket, closeBasket, setShow } from "./Basket";
-
-const Navbar = ({setShow}) => {
+const Navbar = ({ setShow }) => {
   // set the basket icon to open basket
   const openBasket = () => {
     setShow(true);
   };
-  
+
   return (
     <div className="navBar">
-       <button className='homeBtn'  ><AiTwotoneHome /></button>
-        <button className='contactBtn'><BiSolidContact /></button>
-       <button className='basket' onClick={openBasket}><SlBasketLoaded className='basket' /></button>
+      <div className="navItem">
+        <button className="contactBtn">
+          <BiSolidContact />
+        </button>
+        <p>Contact Us</p>
       </div>
-    );
+      <div className="navItem">
+        <button className="homeBtn">
+          <AiTwotoneHome />
+        </button>
+        <p>Home</p>
+      </div>
+      <div className="navItem" onClick={openBasket}>
+        <button className="basket">
+          <SlBasketLoaded className="basket" />
+        </button>
+        <p id="basketNav">Basket</p>
+      </div>
+    </div>
+  );
 };
-  
+
 export default Navbar;

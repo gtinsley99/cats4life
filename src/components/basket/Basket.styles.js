@@ -10,9 +10,11 @@ export const Wrapper = styled.div`
   position: fixed;
   overflow: scroll;
   right: 0;
+  top:0;
   background-color: #f2f2f2;
   border-radius: 10px;
   border-left: 1px solid black;
+  z-index:2;
 `;
 
 export const CloseButton = styled.button`

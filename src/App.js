@@ -25,11 +25,9 @@ function App() {
   FakerName(setName);
   Catsapi(setCats);
 
- 
-
   return (
     <div className="App">
-      <Navbar setShow={setShow}/>
+      <Navbar setShow={setShow} />
       <Title />
       <CatBox
         cats={cats}
@@ -53,7 +51,6 @@ function App() {
           price={prices}
           cats={cats}
           setCats={setCats}
-          
         />
       ) : (
         ""
