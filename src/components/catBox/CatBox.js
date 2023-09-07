@@ -3,14 +3,18 @@ import { Wrapper, Content, Button, Para, Image } from "./CatBox.styles";
 const CatBox = (props) => {
 
   const addBasket = (index) => {
+    let basketList = [...props.basket];
+    let listAdd = [props.name[index], props.price[index], props.cats[index].url];
+    // console.log(basketList.includes(listAdd));
+    // console.log(listAdd);
+    // console.log(basketList);
+    // if(basketList.includes(listAdd) === false){
     let newPrice = Number(props.price[index]);
     props.setTotalPrice(props.totalPrice + newPrice);
-    let basketList = [...props.basket];
-    // let listAdd = [props.cats[index]];
-    let listAdd = new Array (props.name[index], props.price[index], props.cats[index].url);
     basketList.push(listAdd);
     props.setBasket(basketList);
     props.setShow(true);
+    // };
   };
 
   return (

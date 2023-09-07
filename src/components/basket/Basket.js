@@ -8,11 +8,24 @@ import {
   CheckoutButton,
   TotalAmount,
   BasketItem,
+  BasketDelete,
 } from "./Basket.styles";
 
 const Basket = (props) => {
   const closeBasket = () => {
     props.setShow(false);
+  };
+
+  const deleteItem = (index) => {
+    let basketList = [...props.basket];
+    basketList.splice(index, 1);
+    props.setTotalPrice(props.totalPrice - props.basket[index][1]);
+    props.setBasket(basketList);
+  };
+
+  const removeCats = () => {
+    props.setBasket([]);
+    props.setTotalPrice(0);
   };
 
   return (
@@ -26,12 +39,13 @@ const Basket = (props) => {
               <BasketName>Name: {props.basket[index][0]}</BasketName>
               <BasketImage src={props.basket[index][2]}/>
               <BasketPrice>Price: £{props.basket[index][1]}</BasketPrice>
+              <BasketDelete onClick={() => deleteItem(index)}>Delete</BasketDelete>
             </BasketItem>
           );
         })}
 
         <TotalAmount>Total price: £{props.totalPrice.toFixed(2)}</TotalAmount>
-        <CheckoutButton>Proceed to Checkout</CheckoutButton>
+        <CheckoutButton onClick={removeCats}>Proceed to Checkout</CheckoutButton>
       </Wrapper>
     </div>
   );
