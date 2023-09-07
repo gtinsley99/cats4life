@@ -23,14 +23,14 @@ const Basket = (props) => {
         {props.basket.map((item, index) => {
           return (
             <BasketItem key={index}>
-              <BasketName>Name: {item.name}</BasketName>
-              <BasketImage>{item.url}</BasketImage>
-              <BasketPrice>Price: {item.price}</BasketPrice>
+              <BasketName>Name: {props.name[index]}</BasketName>
+              <BasketImage src={item.url}/>
+              <BasketPrice>Price: £{props.price[index]}</BasketPrice>
             </BasketItem>
           );
         })}
 
-        <TotalAmount>Total: £{props.totalPrice.toFixed(2)}</TotalAmount>
+        <TotalAmount>Total price: £{props.totalPrice.toFixed(2)}</TotalAmount>
         <CheckoutButton>Proceed to Checkout</CheckoutButton>
       </Wrapper>
     </div>

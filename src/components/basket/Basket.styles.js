@@ -7,22 +7,22 @@ export const Wrapper = styled.div`
   width: 20%;
   height: 100%;
   position: fixed;
+  overflow: scroll;
   right: 0;
   background-color: #f2f2f2;
   border-radius: 10px;
 `;
 
 export const CloseButton = styled.button`
-  width: 100%;
-  height: 10%;
+  width: 19%;
+  height: 60px;
+  position: fixed;
+  top: 1;
   background-color: #ff9933;
   color: white;
   font-weight: bold;
-  overflow: hidden;
-  transition: color 0.4s linear;
-  transition: background-color 0.4s linear;
-  padding: 10px;
-  border: 1px solid #ff9933;
+  border: none;
+  transition: 0.4s linear;
   font-size: 20px;
 
   &:hover {
@@ -51,9 +51,9 @@ export const BasketPrice = styled.p`
 `;
 
 export const BasketItem = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const TotalAmount = styled.p`
@@ -61,20 +61,17 @@ export const TotalAmount = styled.p`
 `;
 
 export const CheckoutButton = styled.button`
-  width: 100%;
-  height: 11%;
-  position: absolute;
+  width: 20%;
+  height: 60px;
+  position: fixed;
   bottom: 0;
   right: 0;
   background-color: #00ffff;
   color: white;
   font-weight: bold;
   overflow: hidden;
-  transition: color 0.4s linear;
-  transition: background-color 0.4s linear;
-  border-radius: 10px;
-  padding: 10px;
-  border: 1px solid #00ffff;
+  transition: 0.4s linear;
+  border: none;
   font-size: 20px;
   font-family: "Paytone One", sans-serif;
 
