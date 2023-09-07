@@ -11,6 +11,8 @@ import Catsapi from "./components/catsapi/Catsapi";
 function App() {
   const [cats, setCats] = useState([]);
   const [basket, setBasket] = useState([]);
+  const [show, setShow] = useState(false);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   Catsapi(setCats);
   console.log(cats);
@@ -19,8 +21,8 @@ function App() {
     <div className="App">
       <Navbar />
       <Title />
-      <CatBox cats={cats} />
-      <Basket />
+      <CatBox cats={cats} basket={basket} setBasket={setBasket} setShow={setShow} totalPrice={totalPrice} setTotalPrice={setTotalPrice}/>
+      {show ? <Basket setShow={setShow} basket={basket} totalPrice={totalPrice} /> : ""}
     </div>
   );
 }
