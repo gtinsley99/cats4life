@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Button} from "../catBox/CatBox.styles";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -86,3 +87,7 @@ export const CheckoutButton = styled.button`
     border: 1px solid #ff66ff;
   }
 `;
+
+  export const BasketDelete = styled(Button)`
+  
+  `;

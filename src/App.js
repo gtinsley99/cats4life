@@ -19,12 +19,12 @@ function App() {
   const [prices, setPrices] = useState([]);
   const [location, setLocation] = useState([]);
   const [name, setName] = useState([]);
-  
-  FakerPrice(setPrices); 
+
+  FakerPrice(setPrices);
   FakerLocation(setLocation);
   FakerName(setName);
   Catsapi(setCats);
-  console.log(cats);
+
  
 
   return (
@@ -38,12 +38,23 @@ function App() {
         setShow={setShow}
         totalPrice={totalPrice}
         setTotalPrice={setTotalPrice}
-        price = {prices}
-        location = {location}
-        name = {name}
+        price={prices}
+        location={location}
+        name={name}
       />
       {show ? (
-        <Basket setShow={setShow} basket={basket} totalPrice={totalPrice} name={name} price={prices} cats={cats}/>
+        <Basket
+          setShow={setShow}
+          basket={basket}
+          setBasket={setBasket}
+          totalPrice={totalPrice}
+          setTotalPrice={setTotalPrice}
+          name={name}
+          price={prices}
+          cats={cats}
+          setCats={setCats}
+          
+        />
       ) : (
         ""
       )}
