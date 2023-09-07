@@ -20,7 +20,7 @@ const CatBox = (props) => {
             <Para>Name: {faker.person.firstName()}</Para>
             <Para>Breed: {item.breeds[0].name}</Para>
             <Para>Location: {faker.location.country()}</Para>
-            <Para>Price: £{faker.commerce.price({ min: 20, max: 30 })} </Para>
+            <Para>Price: £{props.price[index]}</Para>
             <Image src={item.url} />
             <Button onClick={addBasket}>Add to Basket</Button>
           </Content>
