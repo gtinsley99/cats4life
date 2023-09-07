@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar setShow={setShow}/>
       <Title />
       <CatBox
         cats={cats}

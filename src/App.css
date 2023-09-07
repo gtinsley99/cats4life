@@ -2,32 +2,37 @@
 
 .App {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-color: aliceblue;
   font-family: 'Roboto', sans-serif;
 }
 
-button:hover{
+/* button:hover{
   cursor: pointer;
   background-color: #FFC8C8;
-}
+} */
 
 .navBar{
+  background-color: rgba(144, 238, 144, 0.671);
   display: flex;
   position: fixed;
   flex-direction: row;
-  justify-content: space-between;
   width: 100%;
-  padding-top: 10px;
+  padding: 5px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
    
 }
 
-.basket{
 
+.basket{
+  outline: none;
 }
 
 .titles{
   flex-basis: 100%;
+  padding-top: 35px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -35,15 +40,40 @@ button:hover{
 
 }
 
+.homeBtn{
+  font-size: 30px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.homeBtn:hover {
+  opacity: 0.75;
+}
+.contactBtn{
+  font-size: 30px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.contactBtn:hover {
+  opacity: 0.75;
+}
+.basket{
+  font-size: 30px;
+  padding: 0;
+  background: none;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+}
+.basket:hover {
+  opacity: 0.75;
+}
 .h1{
-  justify-content: center;
-
-}
-
-.h2{
-
-}
-
-.h3{
-
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  
 }
