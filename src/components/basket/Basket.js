@@ -23,9 +23,9 @@ const Basket = (props) => {
         {props.basket.map((item, index) => {
           return (
             <BasketItem key={index}>
-              <BasketName>Name: {props.name[index]}</BasketName>
-              <BasketImage src={item.url}/>
-              <BasketPrice>Price: £{props.price[index]}</BasketPrice>
+              <BasketName>Name: {props.basket[index][0]}</BasketName>
+              <BasketImage src={props.basket[index][2]}/>
+              <BasketPrice>Price: £{props.basket[index][1]}</BasketPrice>
             </BasketItem>
           );
         })}

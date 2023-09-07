@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
   right: 0;
   background-color: #f2f2f2;
   border-radius: 10px;
+  border-left: 1px solid black;
 `;
 
 export const CloseButton = styled.button`
@@ -42,8 +43,8 @@ export const BasketName = styled.p`
 `;
 
 export const BasketImage = styled.img`
-  width: 95%;
-  height: 15%;
+  width: 150%;
+  height: 200px;
 `;
 
 export const BasketPrice = styled.p`
@@ -54,10 +55,13 @@ export const BasketItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: 2px solid black;
+  margin-bottom: 100px;
 `;
 
 export const TotalAmount = styled.p`
   font-size: 18px;
+  margin-bottom: 100px;
 `;
 
 export const CheckoutButton = styled.button`

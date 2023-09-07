@@ -6,7 +6,8 @@ const CatBox = (props) => {
     let newPrice = Number(props.price[index]);
     props.setTotalPrice(props.totalPrice + newPrice);
     let basketList = [...props.basket];
-    let listAdd = [props.cats[index]];
+    // let listAdd = [props.cats[index]];
+    let listAdd = new Array (props.name[index], props.price[index], props.cats[index].url);
     basketList.push(listAdd);
     props.setBasket(basketList);
     props.setShow(true);

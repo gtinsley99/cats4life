@@ -20,10 +20,11 @@ function App() {
   const [location, setLocation] = useState([]);
   const [name, setName] = useState([]);
   
-  FakerPrice(prices, setPrices); 
-  FakerLocation(location, setLocation);
-  FakerName(name, setName);
+  FakerPrice(setPrices); 
+  FakerLocation(setLocation);
+  FakerName(setName);
   Catsapi(setCats);
+  console.log(cats);
  
 
   return (
