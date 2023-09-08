@@ -17,6 +17,7 @@
   padding-top:5px;
   border-bottom: 1px solid black;
   z-index: 1;
+  height: 80px;
 }
 
 .navItem{
@@ -43,7 +44,7 @@
   flex-direction: column;
   text-align: center;
   align-content: center;
-  margin-top: 5%;
+  margin-top: 3%;
 
 }
 
@@ -56,7 +57,7 @@
 }
 
 .navItem:hover {
-  opacity: 0.75;
+  opacity: 0.80;
 }
 .contactBtn{
   font-size: 30px;
@@ -80,6 +81,30 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 50px;
 }
+
+.contactInfo{
+  display: flex;
+  position: relative;
+  top: -9px;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  background-color: rgba(144, 238, 144);
+  border: 1px solid black;
+  border-top: none;
+  padding: 0px 10px;
+  width: 280px;
+  
+}
+
+.contactItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90px;
+}
+
+
 
 .photos{
   width: 200px;
