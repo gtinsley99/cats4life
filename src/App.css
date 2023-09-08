@@ -85,7 +85,7 @@
 .contactInfo{
   display: flex;
   position: relative;
-  top: -9px;
+  top: -8px;
   flex-direction: column;
   align-items: center;
   z-index: 2;

@@ -1,6 +1,4 @@
 import { Wrapper, Cont, Paragraph } from "../favCats/FavCats.styles";
-import { useState } from "react";
-
 
 const FavCats = (props) => {
 
