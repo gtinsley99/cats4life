@@ -12,6 +12,7 @@ import FakerLocation from "./components/fakerData/FakerLocation";
 import FakerName from "./components/fakerData/FakerName";
 import Modal from "./components/modal/Modal";
 import FavCats from "./components/favCats/FavCats";
+import FavTitle from "./components/title/FavouritesTitle";
 
 function App() {
   const [cats, setCats] = useState([]);
@@ -48,6 +49,7 @@ function App() {
       {showNav ? <Navbar setShow={setShow} basketNumber={basketNumber} /> : ""}
       <Title />
       {showModal ? <Modal setShowModal={setShowModal}/> : ""}
+      <FavTitle/>
       <FavCats 
         cats={cats}
         name={name}
