@@ -69,7 +69,7 @@ export const TotalAmount = styled.p`
 `;
 
 export const CheckoutButton = styled.button`
-  width: 286px;
+  width: 299px;
   height: 60px;
   position: fixed;
   bottom: 0;
