@@ -50,8 +50,6 @@ function App() {
       {showModal ? <Modal setShowModal={setShowModal}/> : ""}
       <FavCats 
         cats={cats}
-        images={images}
-        setImages={setImages}
         name={name}
       />
       <CatBox
