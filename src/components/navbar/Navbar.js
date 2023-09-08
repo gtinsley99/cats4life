@@ -5,7 +5,7 @@ import { BiSolidContact } from "react-icons/bi";
 import { SlBasketLoaded } from "react-icons/sl";
 import {BsGithub } from "react-icons/bs";
 
-const Navbar = ({ setShow }) => {
+const Navbar = ({ setShow, basketNumber }) => {
   // set the basket icon to open basket
   const openBasket = () => {
     setShow(true);
@@ -73,7 +73,7 @@ const Navbar = ({ setShow }) => {
         <button className="basket" title="Click to open basket">
           <SlBasketLoaded className="basket" />
         </button>
-        <p id="basketNav">Basket</p>
+        <p id="basketNav">Basket ({basketNumber})</p>
       </div>
     </div>
   );
