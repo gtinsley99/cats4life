@@ -1,9 +1,10 @@
 import React from "react";
+import "../../App.css";
 import { useState } from "react";
 import { AiTwotoneHome } from "react-icons/ai";
 import { BiSolidContact } from "react-icons/bi";
 import { SlBasketLoaded } from "react-icons/sl";
-import {BsGithub } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 
 const Navbar = ({ setShow, basketNumber }) => {
   // set the basket icon to open basket
@@ -11,60 +12,53 @@ const Navbar = ({ setShow, basketNumber }) => {
     setShow(true);
   };
 
-
-  // to create the scroll to top function on the home button
-  let mybutton = document.getElementsByClassName("homeBtn");
-
-  window.onscroll = function() {scrollFunction()};
-
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.style = "block";
-    } else {
-      mybutton.style = "none";
-    }
-  }
-
   // When the user clicks on the button, scroll to the top of the document
-  function topFunction() {
+  const topFunction = () => {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }
-
-  // to create the contacts function
+  };
 
   // create the contact popup with the contact info
   const [contacts, showContacts] = useState(false);
 
   const openContacts = () => {
-   showContacts(!contacts)
+    showContacts(!contacts);
   };
-  
+
   return (
     <div className="navBar">
-      <div className="navItem">
-        <button className="contactBtn" onClick={openContacts} >
-          <BiSolidContact />
-        </button>
-        <p>Contact Us</p>
-      
-        {contacts ? (
-        <div className="contactInfo">
-        <span>
-          DEVELOPERS:
-          Margaret Irungu - <BsGithub/> MargaretIrungu95
-          Jett Jagger - <BsGithub/> JettJagger
-          Zaid Patel - <BsGithub/> Zaid779
-          George Tinsley - <BsGithub/> gtinsley99
-        </span>
-      </div>) : ""}
-     
-      
-        
+      <div className="contactItem">
+        <div className="navItem" onClick={openContacts}>
+          <button className="contactBtn">
+            <BiSolidContact />
+          </button>
+          <p>Contact Us</p>
+        </div>
 
+        {contacts ? (
+          <div className="contactInfo">
+            <p> DEVELOPERS:</p>
+            <p>
+              {" "}
+              Margaret Irungu - <BsGithub /> MargaretIrungu95{" "}
+            </p>
+            <p>
+              Jett Jagger - <BsGithub /> JettJagger{" "}
+            </p>
+            <p>
+              Zaid Patel - <BsGithub /> Zaid779
+            </p>
+            <p>
+              {" "}
+              George Tinsley - <BsGithub /> gtinsley99
+            </p>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
 
-      <div className="navItem">
-        <button className="homeBtn" title="Click to scroll back to top" onClick={topFunction}> 
+      <div className="navItem" onClick={topFunction}>
+        <button className="homeBtn" title="Click to scroll back to top">
           <AiTwotoneHome />
         </button>
         <p>Home</p>
