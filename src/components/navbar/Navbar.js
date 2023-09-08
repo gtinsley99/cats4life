@@ -42,7 +42,7 @@ const Navbar = ({ setShow, basketNumber }) => {
   return (
     <div className="navBar">
       <div className="navItem">
-        <button className="contactBtn" onClick={openContacts} >
+        <button className="contactBtn" onClick={openContacts} title="Click to view information" >
           <BiSolidContact />
         </button>
         <p>Contact Us</p>
