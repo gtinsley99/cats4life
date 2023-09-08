@@ -13,7 +13,7 @@ const CatBox = (props) => {
     props.setTotalPrice(props.totalPrice + newPrice);
     basketList.push(listAdd);
     props.setBasket(basketList);
-    props.setShow(true);
+    props.setBasketNumber(props.basketNumber + 1);
     // };
   };
 

@@ -21,11 +21,13 @@ const Basket = (props) => {
     basketList.splice(index, 1);
     props.setTotalPrice(props.totalPrice - props.basket[index][1]);
     props.setBasket(basketList);
+    props.setBasketNumber(props.basketNumber - 1);
   };
 
   const removeCats = () => {
     props.setBasket([]);
     props.setTotalPrice(0);
+    props.setBasketNumber(0);
   };
 
   return (
