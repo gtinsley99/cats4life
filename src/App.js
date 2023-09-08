@@ -10,6 +10,7 @@ import Catsapi from "./components/catsapi/Catsapi";
 import FakerPrice from "./components/fakerData/FakerPrice";
 import FakerLocation from "./components/fakerData/FakerLocation";
 import FakerName from "./components/fakerData/FakerName";
+import Modal from "./components/modal/Modal";
 
 function App() {
   const [cats, setCats] = useState([]);
@@ -22,6 +23,7 @@ function App() {
   const [basketNumber, setBasketNumber] = useState(0);
   const [showNav, setShowNav] = useState(true);
   const [baskIndex, setBaskIndex] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   FakerPrice(setPrices);
   FakerLocation(setLocation);
@@ -43,6 +45,7 @@ function App() {
     <div className="App">
       {showNav ? <Navbar setShow={setShow} basketNumber={basketNumber} /> : ""}
       <Title />
+      {showModal ? <Modal setShowModal={setShowModal}/> : ""}
       <CatBox
         cats={cats}
         basket={basket}
@@ -78,6 +81,7 @@ function App() {
           setBasketNumber={setBasketNumber}
           baskIndex={baskIndex}
           setBaskIndex={setBaskIndex}
+          setShowModal={setShowModal}
         />
       ) : (
         ""

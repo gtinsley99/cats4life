@@ -30,28 +30,31 @@ const Basket = (props) => {
     props.setBasketNumber(props.basketNumber - 1);
   };
 
-  const removeCats = () => {
+  const checkout = () => {
     let indexList = [...props.baskIndex];
-    indexList.sort((a, b) => b - a);
-    let catList = [...props.cats];
-    let nameList = [...props.name];
-    let priceList = [...props.price];
-    let locationList = [...props.location];
-    for (let i = 0; i < indexList.length; i++) {
-      catList.splice(indexList[i], 1);
-      nameList.splice(indexList[i], 1);
-      priceList.splice(indexList[i], 1);
-      locationList.splice(indexList[i], 1);
+    if (indexList.length > 0) {
+      indexList.sort((a, b) => b - a);
+      let catList = [...props.cats];
+      let nameList = [...props.name];
+      let priceList = [...props.price];
+      let locationList = [...props.location];
+      for (let i = 0; i < indexList.length; i++) {
+        catList.splice(indexList[i], 1);
+        nameList.splice(indexList[i], 1);
+        priceList.splice(indexList[i], 1);
+        locationList.splice(indexList[i], 1);
+      }
+      props.setCats(catList);
+      props.setName(nameList);
+      props.setPrice(priceList);
+      props.setLocation(locationList);
+      props.setBasket([]);
+      props.setBaskIndex([]);
+      props.setTotalPrice(0);
+      props.setBasketNumber(0);
+      props.setShow(false);
+      props.setShowModal(true);
     }
-    props.setCats(catList);
-    props.setName(nameList);
-    props.setPrice(priceList);
-    props.setLocation(locationList);
-    props.setBasket([]);
-    props.setBaskIndex([]);
-    props.setTotalPrice(0);
-    props.setBasketNumber(0);
-    props.setShow(false);
   };
 
   return (
@@ -73,9 +76,7 @@ const Basket = (props) => {
         })}
 
         <TotalAmount>Total price: £{props.totalPrice.toFixed(2)}</TotalAmount>
-        <CheckoutButton onClick={removeCats}>
-          Proceed to Checkout
-        </CheckoutButton>
+        <CheckoutButton onClick={checkout}>Proceed to Checkout</CheckoutButton>
       </Wrapper>
     </div>
   );
