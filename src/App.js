@@ -7,8 +7,9 @@ import Navbar from "./components/navbar/Navbar";
 import Title from "./components/title/Title";
 import CatBox from "./components/catBox/CatBox";
 import Catsapi from "./components/catsapi/Catsapi";
-
 import FakerPrice from "./components/fakerData/FakerPrice";
+import FakerLocation from "./components/fakerData/FakerLocation";
+import FakerName from "./components/fakerData/FakerName";
 
 function App() {
   const [cats, setCats] = useState([]);
@@ -16,22 +17,37 @@ function App() {
   const [show, setShow] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
   const [prices, setPrices] = useState([]);
-
-  Catsapi(setCats);
+  const [location, setLocation] = useState([]);
+  const [name, setName] = useState([]);
   
-  FakerPrice(setPrices, prices);
+  FakerPrice(prices, setPrices); 
+  FakerLocation(location, setLocation);
+  FakerName(name, setName);
+  Catsapi(setCats);
+ 
 
   return (
     <div className="App">
       <Navbar />
       <Title />
-      <CatBox cats={cats} basket={basket} setBasket={setBasket} setShow={setShow} totalPrice={totalPrice} setTotalPrice={setTotalPrice} price={prices}/>
-      {show ? <Basket setShow={setShow} basket={basket} totalPrice={totalPrice} /> : ""}
-  
+      <CatBox
+        cats={cats}
+        basket={basket}
+        setBasket={setBasket}
+        setShow={setShow}
+        totalPrice={totalPrice}
+        setTotalPrice={setTotalPrice}
+        price = {prices}
+        location = {location}
+        name = {name}
+      />
+      {show ? (
+        <Basket setShow={setShow} basket={basket} totalPrice={totalPrice} name={name} price={prices} cats={cats}/>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
-
-https://prod.liveshare.vsengsaas.visualstudio.com/join?59078F70723DD605EEE0A25FF00D84717281
 
 export default App;
