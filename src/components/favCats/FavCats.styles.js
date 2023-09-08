@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     width: 30vw;
+    min-width:300px;
     padding: 20px;
     border: 3px solid black;
     margin: 20px;

@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 20%;
+  width: 300px;
   height: 100%;
   position: fixed;
   overflow: scroll;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 `;
 
 export const CloseButton = styled.button`
-  width: 19%;
+  width: 286px;
   height: 60px;
   position: fixed;
   top: 1;
@@ -69,7 +69,7 @@ export const TotalAmount = styled.p`
 `;
 
 export const CheckoutButton = styled.button`
-  width: 20%;
+  width: 286px;
   height: 60px;
   position: fixed;
   bottom: 0;
