@@ -1,7 +1,7 @@
 import React from "react";
 
 const AboutBox = (props) => {
-  console.log(props)
+  console.log(cats);
 
   return (
     <div>
