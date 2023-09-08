@@ -11,6 +11,7 @@ import FakerPrice from "./components/fakerData/FakerPrice";
 import FakerLocation from "./components/fakerData/FakerLocation";
 import FakerName from "./components/fakerData/FakerName";
 import Modal from "./components/modal/Modal";
+import FavCats from "./components/favCats/FavCats";
 
 function App() {
   const [cats, setCats] = useState([]);
@@ -47,6 +48,12 @@ function App() {
       {showNav ? <Navbar setShow={setShow} basketNumber={basketNumber} /> : ""}
       <Title />
       {showModal ? <Modal setShowModal={setShowModal}/> : ""}
+      <FavCats 
+        cats={cats}
+        images={images}
+        setImages={setImages}
+        name={name}
+      />
       <CatBox
         cats={cats}
         basket={basket}

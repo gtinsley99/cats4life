@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Button} from "../catBox/CatBox.styles";
 
+
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
