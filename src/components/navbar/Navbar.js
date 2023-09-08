@@ -26,14 +26,12 @@ const Navbar = ({ setShow, basketNumber }) => {
 
   return (
     <div className="navBar">
-      <div className="contactItem">
-        <div className="navItem" onClick={openContacts}>
-          <button className="contactBtn">
-            <BiSolidContact />
-          </button>
-          <p>Contact Us</p>
-        </div>
-
+      <div className="navItem">
+        <button className="contactBtn" onClick={openContacts} title="Click to view information">
+          <BiSolidContact />
+        </button>
+        <p>Contact Us</p>
+      
         {contacts ? (
           <div className="contactInfo">
             <p> DEVELOPERS:</p>
