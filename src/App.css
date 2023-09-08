@@ -2,12 +2,81 @@
 
 .App {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-color: aliceblue;
   font-family: 'Roboto', sans-serif;
 }
 
-button:hover{
+.navBar{
+  background-color: rgba(144, 238, 144);
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  width: 100%;
+  padding-top:5px;
+  border-bottom: 1px solid black;
+  z-index: 1;
+}
+
+.navItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  background-color: #FFC8C8;
+}
+
+#basketNav{
+  position: relative;
+  right: -20%;
+}
+
+.basket{
+  outline: none;
+}
+
+.titles{
+  flex-basis: 100%;
+  padding-top: 35px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  margin-top: 5%;
+
+}
+
+.homeBtn{
+  font-size: 30px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  opacity: 0.75;
+}
+.contactBtn{
+  font-size: 30px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.basket{
+  font-size: 30px;
+  padding: 0;
+  background: none;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
 }

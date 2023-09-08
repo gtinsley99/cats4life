@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Button} from "../catBox/CatBox.styles";
 
 
 export const Wrapper = styled.div`
@@ -8,22 +9,25 @@ export const Wrapper = styled.div`
   width: 20%;
   height: 100%;
   position: fixed;
+  overflow: scroll;
   right: 0;
+  top:0;
   background-color: #f2f2f2;
   border-radius: 10px;
+  border-left: 1px solid black;
+  z-index:2;
 `;
 
 export const CloseButton = styled.button`
-  width: 100%;
-  height: 10%;
+  width: 19%;
+  height: 60px;
+  position: fixed;
+  top: 1;
   background-color: #ff9933;
   color: white;
   font-weight: bold;
-  overflow: hidden;
-  transition: color 0.4s linear;
-  transition: background-color 0.4s linear;
-  padding: 10px;
-  border: 1px solid #ff9933;
+  border: none;
+  transition: 0.4s linear;
   font-size: 20px;
 
   &:hover {
@@ -43,8 +47,8 @@ export const BasketName = styled.p`
 `;
 
 export const BasketImage = styled.img`
-  width: 95%;
-  height: 15%;
+  width: 150%;
+  height: 200px;
 `;
 
 export const BasketPrice = styled.p`
@@ -52,30 +56,30 @@ export const BasketPrice = styled.p`
 `;
 
 export const BasketItem = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid black;
+  margin-bottom: 100px;
 `;
 
 export const TotalAmount = styled.p`
   font-size: 18px;
+  margin-bottom: 100px;
 `;
 
 export const CheckoutButton = styled.button`
-  width: 100%;
-  height: 11%;
-  position: absolute;
+  width: 20%;
+  height: 60px;
+  position: fixed;
   bottom: 0;
   right: 0;
   background-color: #00ffff;
   color: white;
   font-weight: bold;
   overflow: hidden;
-  transition: color 0.4s linear;
-  transition: background-color 0.4s linear;
-  border-radius: 10px;
-  padding: 10px;
-  border: 1px solid #00ffff;
+  transition: 0.4s linear;
+  border: none;
   font-size: 20px;
   font-family: "Paytone One", sans-serif;
 
@@ -86,3 +90,7 @@ export const CheckoutButton = styled.button`
     border: 1px solid #ff66ff;
   }
 `;
+
+  export const BasketDelete = styled(Button)`
+  
+  `;

@@ -19,16 +19,16 @@ function App() {
   const [prices, setPrices] = useState([]);
   const [location, setLocation] = useState([]);
   const [name, setName] = useState([]);
-  
-  FakerPrice(prices, setPrices); 
-  FakerLocation(location, setLocation);
-  FakerName(name, setName);
+  const [basketNumber, setBasketNumber] = useState(0);
+
+  FakerPrice(setPrices);
+  FakerLocation(setLocation);
+  FakerName(setName);
   Catsapi(setCats);
- 
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar setShow={setShow} basketNumber={basketNumber}/>
       <Title />
       <CatBox
         cats={cats}
@@ -37,12 +37,26 @@ function App() {
         setShow={setShow}
         totalPrice={totalPrice}
         setTotalPrice={setTotalPrice}
-        price = {prices}
-        location = {location}
-        name = {name}
+        price={prices}
+        location={location}
+        name={name}
+        basketNumber={basketNumber}
+        setBasketNumber={setBasketNumber}
       />
       {show ? (
-        <Basket setShow={setShow} basket={basket} totalPrice={totalPrice} name={name} price={prices} cats={cats}/>
+        <Basket
+          setShow={setShow}
+          basket={basket}
+          setBasket={setBasket}
+          totalPrice={totalPrice}
+          setTotalPrice={setTotalPrice}
+          name={name}
+          price={prices}
+          cats={cats}
+          setCats={setCats}
+          basketNumber={basketNumber}
+          setBasketNumber={setBasketNumber}
+        />
       ) : (
         ""
       )}
