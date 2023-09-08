@@ -40,11 +40,11 @@ const CatBox = (props) => {
     setShowAbout(updatedShowAbout);
   };
 
-  const handleCloseAbout = (index) => {
-    const updatedShowAbout = [...showAbout];
-    updatedShowAbout[index] = false;
-    setShowAbout(updatedShowAbout);
-  };
+  // const handleCloseAbout = (index) => {
+  //   const updatedShowAbout = [...showAbout];
+  //   updatedShowAbout[index] = false;
+  //   setShowAbout(updatedShowAbout);
+  // };
 
   return (
     <Wrapper>
@@ -62,11 +62,23 @@ const CatBox = (props) => {
               <div>
                 <AboutBox
                   about={item.breeds[0].name}
+                  origin={item.breeds[0].origin}
                   desc={item.breeds[0].description}
-                  age={item.breeds[0].age}
                   weight={item.breeds[0].weight}
+                  hypo={item.breeds[0].hypoallergenic}
+                  energy={item.breeds[0].energy_level}
+                  grooming={item.breeds[0].grooming}
+                  life={item.breeds[0].life_span}
+                  shed={item.breeds[0].shedding_level}
+                  social={item.breeds[0].social_needs}
+                  adapt={item.breeds[0].adaptability}
+                  affection={item.breeds[0].affection_level}
+                  temp={item.breeds[0].temperament}           
+                  showAbout={showAbout}
+                  setShowAbout={setShowAbout}
+                  index={index}
                 />
-                <Button onClick={() => handleCloseAbout(index)}>Close</Button>
+                {/* <Button onClick={() => handleCloseAbout(index)}>Close</Button> */}
               </div>
             ) : (
               ""

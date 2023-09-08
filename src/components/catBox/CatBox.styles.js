@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
   width: 90vw;
   border: 3px solid black;
   margin: 20px;
+  padding: 10px;
   background-color: ${primaryColor};
 `;
 

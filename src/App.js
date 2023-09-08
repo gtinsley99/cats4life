@@ -24,6 +24,7 @@ function App() {
   const [showNav, setShowNav] = useState(true);
   const [baskIndex, setBaskIndex] = useState([]);
   const [showModal, setShowModal] = useState(false);
+console.log(cats);
 
   FakerPrice(setPrices);
   FakerLocation(setLocation);
