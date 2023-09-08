@@ -30,6 +30,7 @@ function App() {
   FakerName(setName);
   Catsapi(setCats);
 
+  // Show navbar on scrollup, hide on scrolldown
   let prevScrolllPos = window.scrollY;
   window.onscroll = () => {
     let currentScrollPos = window.scrollY;
