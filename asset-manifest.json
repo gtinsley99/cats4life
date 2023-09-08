@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/cats4life/static/css/main.3bc87e6b.css",
-    "main.js": "/cats4life/static/js/main.463e2e7c.js",
+    "main.css": "/cats4life/static/css/main.f6905e0f.css",
+    "main.js": "/cats4life/static/js/main.01581766.js",
     "static/media/att.jpg": "/cats4life/static/media/att.a4f4e511c8c8bf56a12a.jpg",
     "index.html": "/cats4life/index.html",
-    "main.3bc87e6b.css.map": "/cats4life/static/css/main.3bc87e6b.css.map",
-    "main.463e2e7c.js.map": "/cats4life/static/js/main.463e2e7c.js.map"
+    "main.f6905e0f.css.map": "/cats4life/static/css/main.f6905e0f.css.map",
+    "main.01581766.js.map": "/cats4life/static/js/main.01581766.js.map"
   },
   "entrypoints": [
-    "static/css/main.3bc87e6b.css",
-    "static/js/main.463e2e7c.js"
+    "static/css/main.f6905e0f.css",
+    "static/js/main.01581766.js"
   ]
 }
