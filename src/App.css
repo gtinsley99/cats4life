@@ -107,5 +107,12 @@
 
 
 .photos{
-  width: 200px;
+  width: 100%;
+  height: auto;
+  border: 1px solid grey;
+}
+
+.favHeader{
+
+  margin: 25px;
 }
