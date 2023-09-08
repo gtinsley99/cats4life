@@ -27,7 +27,7 @@ export const Content = styled.div`
   box-shadow: 1px 2px;
   width: 30%;
   min-width: 250px;
-  max-width: 500px;
+  max-height:800px;
   transition: 0.5s;
 
   @media (max-width: 768px) {
