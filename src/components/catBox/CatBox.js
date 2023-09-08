@@ -10,10 +10,28 @@ import AboutBox from "./AboutBox";
 
 const CatBox = (props) => {
   const [showAbout, setShowAbout] = useState(Array(props.cats.length).fill(false));
-  const addBasket = () => {
-    props.setTotalPrice(props.totalPrice + 5);
-    props.setShow(true);
-
+  const addBasket = (index) => {
+    let basketList = [...props.basket];
+    let listAdd = [
+      props.name[index],
+      props.price[index],
+      props.cats[index].url,
+      index
+    ];
+    const allreadyExists = props.basket.some(
+      (item) => item[2] === props.cats[index].url
+    );
+    if (allreadyExists === false) {
+      let newPrice = Number(props.price[index]);
+      props.setTotalPrice(props.totalPrice + newPrice);
+      basketList.push(listAdd);
+      props.setBasket(basketList);
+      props.setBasketNumber(props.basketNumber + 1);
+      props.setShowNav(true);
+      let indexList = [...props.baskIndex];
+      indexList.push(index);
+      props.setBaskIndex(indexList);
+    }
   };
 
   const openAboutMe = (index) => {
@@ -32,40 +50,29 @@ const CatBox = (props) => {
     <Wrapper>
       {props.cats.map((item, index) => {
         return (
-          <Content key={index} value={index}>
-            <Para>Name: {faker.person.firstName()}</Para>
-            <Para>Breed: {item.breeds[0].name}</Para>
-            <Para>Location: {faker.location.country()}</Para>
-            <Para>Price: £{faker.commerce.price({ min: 75, max: 95 })} </Para>
-            <Image src={item.url} />
-            <Button onClick={() => openAboutMe(index)}>About Me</Button>
-            <Button onClick={addBasket}>Add to Basket</Button>
-            {showAbout[index] ? (
-
-<div>
-
-  <AboutBox
-
-    about={item.breeds[0].name}
-
-    desc={item.breeds[0].description}
-
-    age={item.breeds[0].age}
-
-    weight={item.breeds[0].weight}
-
-  />
-
-  <Button onClick={() => handleCloseAbout(index)}>Close</Button>
-
-</div>
-
-) : (
-
-""
-
-)}
-          </Content>
+          <Content key={index}>
+          <Para>Name: {props.name[index]}</Para>
+          <Para>Breed: {item.breeds[0].name}</Para>
+          <Para>Location: {props.location[index]}</Para>
+          <Para>Price: £{props.price[index]} </Para>
+          <Image src={item.url} />
+          <Button onClick={() => openAboutMe(index)}>About Me</Button>
+          <Button onClick={() => addBasket(index)}>Add to Basket</Button>
+          {showAbout[index] ? (
+              <div>
+                <AboutBox
+                  about={item.breeds[0].name}
+                  desc={item.breeds[0].description}
+                  age={item.breeds[0].age}
+                  weight={item.breeds[0].weight}
+                />
+                <Button onClick={() => handleCloseAbout(index)}>Close</Button>
+              </div>
+            ) : (
+              ""
+            )}
+        </Content>
+        
         );
       })}
     </Wrapper>
