@@ -13,6 +13,7 @@ function App() {
   const [basket, setBasket] = useState([]);
   const [show, setShow] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
+ 
 
   Catsapi(setCats);
   console.log(cats);
