@@ -12,6 +12,7 @@ import FakerLocation from "./components/fakerData/FakerLocation";
 import FakerName from "./components/fakerData/FakerName";
 import Modal from "./components/modal/Modal";
 import FavCats from "./components/favCats/FavCats";
+import FavTitle from "./components/title/FavouritesTitle";
 import catsOfTheWeek from "./components/favCats/FavcatsData";
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
       {showNav ? <Navbar setShow={setShow} basketNumber={basketNumber} /> : ""}
       <Title />
       {showModal ? <Modal setShowModal={setShowModal}/> : ""}
+      <FavTitle/>
       <FavCats 
         catsOfTheWeek={catsOfTheWeek}
       />
