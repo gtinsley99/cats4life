@@ -20,15 +20,27 @@ function App() {
   const [location, setLocation] = useState([]);
   const [name, setName] = useState([]);
   const [basketNumber, setBasketNumber] = useState(0);
+  const [showNav, setShowNav] = useState(true);
 
   FakerPrice(setPrices);
   FakerLocation(setLocation);
   FakerName(setName);
   Catsapi(setCats);
 
+  let prevScrolllPos = window.scrollY;
+  window.onscroll = () => {
+    let currentScrollPos = window.scrollY;
+    if (prevScrolllPos > currentScrollPos || currentScrollPos < 200) {
+      setShowNav(true);
+    } else {
+      setShowNav(false);
+    }
+    prevScrolllPos = currentScrollPos;
+  };
+
   return (
     <div className="App">
-      <Navbar setShow={setShow} basketNumber={basketNumber}/>
+      {showNav ? <Navbar setShow={setShow} basketNumber={basketNumber} /> : ""}
       <Title />
       <CatBox
         cats={cats}
@@ -42,6 +54,7 @@ function App() {
         name={name}
         basketNumber={basketNumber}
         setBasketNumber={setBasketNumber}
+        setShowNav={setShowNav}
       />
       {show ? (
         <Basket

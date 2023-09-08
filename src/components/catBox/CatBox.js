@@ -5,16 +5,18 @@ const CatBox = (props) => {
   const addBasket = (index) => {
     let basketList = [...props.basket];
     let listAdd = [props.name[index], props.price[index], props.cats[index].url];
-    // console.log(basketList.includes(listAdd));
-    // console.log(listAdd);
-    // console.log(basketList);
-    // if(basketList.includes(listAdd) === false){
+    const allreadyExists = props.basket.some((item) => item[2] === props.cats[index].url)
+    console.log(allreadyExists);
+    console.log(listAdd);
+    console.log(basketList);
+    if(allreadyExists === false){
     let newPrice = Number(props.price[index]);
     props.setTotalPrice(props.totalPrice + newPrice);
     basketList.push(listAdd);
     props.setBasket(basketList);
     props.setBasketNumber(props.basketNumber + 1);
-    // };
+    props.setShowNav(true);
+    };
   };
 
   return (
