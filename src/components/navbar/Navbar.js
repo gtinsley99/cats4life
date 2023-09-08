@@ -3,7 +3,7 @@ import { AiTwotoneHome } from "react-icons/ai";
 import { BiSolidContact } from "react-icons/bi";
 import { SlBasketLoaded } from "react-icons/sl";
 
-const Navbar = ({ setShow }) => {
+const Navbar = ({ setShow, basketNumber }) => {
   // set the basket icon to open basket
   const openBasket = () => {
     setShow(true);
@@ -27,7 +27,7 @@ const Navbar = ({ setShow }) => {
         <button className="basket">
           <SlBasketLoaded className="basket" />
         </button>
-        <p id="basketNav">Basket</p>
+        <p id="basketNav">Basket ({basketNumber})</p>
       </div>
     </div>
   );

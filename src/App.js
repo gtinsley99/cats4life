@@ -19,6 +19,7 @@ function App() {
   const [prices, setPrices] = useState([]);
   const [location, setLocation] = useState([]);
   const [name, setName] = useState([]);
+  const [basketNumber, setBasketNumber] = useState(0);
 
   FakerPrice(setPrices);
   FakerLocation(setLocation);
@@ -27,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar setShow={setShow} />
+      <Navbar setShow={setShow} basketNumber={basketNumber}/>
       <Title />
       <CatBox
         cats={cats}
@@ -39,6 +40,8 @@ function App() {
         price={prices}
         location={location}
         name={name}
+        basketNumber={basketNumber}
+        setBasketNumber={setBasketNumber}
       />
       {show ? (
         <Basket
@@ -51,6 +54,8 @@ function App() {
           price={prices}
           cats={cats}
           setCats={setCats}
+          basketNumber={basketNumber}
+          setBasketNumber={setBasketNumber}
         />
       ) : (
         ""
