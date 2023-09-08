@@ -5,7 +5,7 @@ export const FavTitle = () => {
     
     return (
         <div>
-            <h3 className="favHeader">Favourites <BsFillStarFill/> :</h3>
+            <h3 className="favHeader"><BsFillStarFill/> Cats of the week  :</h3>
         </div>
     )
 };

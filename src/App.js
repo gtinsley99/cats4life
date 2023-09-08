@@ -13,6 +13,7 @@ import FakerName from "./components/fakerData/FakerName";
 import Modal from "./components/modal/Modal";
 import FavCats from "./components/favCats/FavCats";
 import FavTitle from "./components/title/FavouritesTitle";
+import catsOfTheWeek from "./components/favCats/FavcatsData";
 
 function App() {
   const [cats, setCats] = useState([]);
@@ -51,8 +52,7 @@ function App() {
       {showModal ? <Modal setShowModal={setShowModal}/> : ""}
       <FavTitle/>
       <FavCats 
-        cats={cats}
-        name={name}
+        catsOfTheWeek={catsOfTheWeek}
       />
       <CatBox
         cats={cats}
