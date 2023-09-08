@@ -21,6 +21,9 @@ export const Content = styled.div`
   border: 3px solid black;
   margin: 20px;
   padding: 5px;
+  max-height: 1000px;
+  overflow-y:auto;
+  overflow-x:hidden;
   font-size: 20px;
   background-color: white;
   border-radius: 5%;
