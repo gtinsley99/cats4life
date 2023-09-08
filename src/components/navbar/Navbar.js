@@ -79,13 +79,4 @@ const Navbar = ({ setShow }) => {
   );
 };
 
-<div className="contactInfo">
-  <span>
-    DEVELOPERS:
-    Margaret Irungu - <BsGithub/> MargaretIrungu95
-    Jett Jagger - <BsGithub/> JettJagger
-    Zaid Patel - <BsGithub/> Zaid779
-    George Tinsley - <BsGithub/> gtinsley99
-  </span>
-</div>
 export default Navbar;
